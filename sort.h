@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define FALSE 0
+#define TRUE 1
+
 /**
  * struct listint_s - Doubly linked list node
  * @n: Integer stored in the node
