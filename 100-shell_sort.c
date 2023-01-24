@@ -10,7 +10,7 @@ void shell_sort(int *array, size_t size)
 	size_t gap = 1;
 	int iTmp, *piIter *piDec;
 
-	if (array || size < 2)
+	if (array == NULL || size < 2)
 	{
 		return;
 	}
