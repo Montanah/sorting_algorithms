@@ -36,13 +36,10 @@ void cocktail_sort_list(listint_t **list)
 	{
 		return;
 	}
-
 	psIter = *list;
-
 	while (bSwap == TRUE)
 	{
 		bSwap = FALSE;
-
 		while (psIter->next != NULL)
 		{
 			if (psIter->n > psIter->next->n)
@@ -60,7 +57,6 @@ void cocktail_sort_list(listint_t **list)
 				psIter = psIter->next;
 			}
 		}
-
 		while (psIter->prev != NULL)
 		{
 			if (psIter->n < psIter->prev->n)
