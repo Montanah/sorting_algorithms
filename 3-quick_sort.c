@@ -10,16 +10,13 @@
  */
 void partition(int *piBegin, int *piEnd, int *array, size_t size)
 {
-	int *piIter = piBegin;
-	int *piInsert = piBegin;
-	int iTmp;
+	int *piIter = piBegin, *piInsert = piBegin, iTmp;
 	int isHomogenous = TRUE;
 
 	if (piEnd == piBegin)
 	{
 		return;
 	}
-
 	while (piIter < piEnd)
 	{
 		if (*piIter < *piEnd)
@@ -34,7 +31,6 @@ void partition(int *piBegin, int *piEnd, int *array, size_t size)
 			piInsert++;
 			isHomogenous = FALSE;
 		}
-
 		if (*piIter > *piEnd)
 		{
 			isHomogenous = FALSE;
@@ -52,7 +48,6 @@ void partition(int *piBegin, int *piEnd, int *array, size_t size)
 		*piInsert = iTmp;
 		print_array(array, size);
 	}
-
 	partition(piBegin, piInsert - 1, array, size);
 	partition(piInsert, piEnd, array, size);
 }
